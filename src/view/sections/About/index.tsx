@@ -1,14 +1,14 @@
 'use client';
 
-import Image from 'next/image';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
+import ImagePerfil from '@/assets/Perfil.png';
+import { stacks } from '@/data/stacks';
 import { useSectionInView } from '@/hooks/useSectionInView';
 import { cn } from '@/utils/cn';
 import { SpecialText } from '../../components/SpecialText';
-import ImagePerfil from '@/assets/Perfil.jpg';
 import { StackItem } from './components/StackItem';
-import { stacks } from '@/data/stacks';
 
 export function About() {
   const { ref } = useSectionInView('about');
@@ -116,7 +116,15 @@ export function About() {
             viewport={{ once: true, amount: 0.9 }}
             className="flex justify-center items-center"
           >
-            <Image src={ImagePerfil} alt="ImagePerfil" className="w-1/3 h-1/3 rounded-full" />
+            <div className="relative w-2/5 aspect-square">
+              <div className="absolute inset-0 rounded-full p-2 bg-gradient-to-tr from-[#3b82f6] via-[#8b5cf6] to-[#3b82f6] animate-spin-slow blur-sm"></div>
+
+              <Image
+                src={ImagePerfil}
+                alt="ImagePerfil"
+                className="rounded-full bg-[#e3e3e3] relative z-10 w-full h-full object-cover"
+              />
+            </div>
           </motion.div>
 
           <motion.div

@@ -19,7 +19,10 @@ const config: Config = {
         detail: 'var(--detail)',
         online: 'var(--online)',
         'input-label': 'var(--input-label)',
-      }
+      },
+      animation: {
+        'spin-slow': 'spin 6s linear infinite',
+      },
     },
   },
 }
