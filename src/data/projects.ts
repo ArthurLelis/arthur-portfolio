@@ -1,10 +1,14 @@
-import WaiterAppLogo from '@/assets/projects/WaiterAppLogo.svg';
 import WaiterAppBanner from '@/assets/projects/WaiterAppBanner.svg';
+import WaiterAppLogo from '@/assets/projects/WaiterAppLogo.svg';
 import WaiterAppThumbnail from '@/assets/projects/WaiterAppThumbnail.svg';
 
-import FincheckLogo from '@/assets/projects/FincheckLogo.svg';
 import FincheckBanner from '@/assets/projects/FincheckBanner.svg';
+import FincheckLogo from '@/assets/projects/FincheckLogo.svg';
 import FincheckThumbnail from '@/assets/projects/FincheckThumbnail.svg';
+
+import FoodiaryBanner from '@/assets/projects/FoodiaryBanner.svg';
+// import FoodiaryLogo from '@/assets/projects/FoodiaryLogo.svg';
+import FoodiaryThumbnail from '@/assets/projects/FoodiaryThumbnail.svg';
 
 import { stacks } from './stacks';
 
@@ -32,6 +36,19 @@ export const projects = [
     description: 'O Fincheck é um aplicativo desenvolvido para ajudar usuários a monitorar suas finanças pessoais de forma fácil e eficiente. O objetivo do projeto é fornecer ferramentas que permitam o controle total sobre contas bancárias, investimentos, despesas, receitas e planejamento financeiro.',
     stacks: stacks.filter((stack) =>
       ['NestJS', 'Prisma', 'PostgreSQL', 'JWT Tokens', 'Typescript', 'Vite', 'React', 'Tailwind', 'React Hook Form', 'Zod', 'React Query', 'Radix']
+        .some((tech) => stack.name === tech)
+    )
+  },
+  {
+    title: 'Foodiary',
+    logo: FincheckLogo,
+    images: {
+      banner: FoodiaryBanner,
+      thumbnail: FoodiaryThumbnail,
+    },
+    description: 'Foodiary é um app mobile que ajuda usuários a acompanharem sua alimentação de forma simples e inteligente.',
+    stacks: stacks.filter((stack) =>
+      ['NodeJS', 'PostgreSQL', 'Typescript', 'React', 'React Native', 'Zod']
         .some((tech) => stack.name === tech)
     )
   },
